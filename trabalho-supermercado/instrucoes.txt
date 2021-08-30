@@ -1,0 +1,84 @@
+TRABALHO DE BANCO DE DADOS
+
+
+Parte 1 - Modelagem Relacional
+
+Modele um banco de dados que atenda as necessidades de uma rede de supermercados.
+
+• O banco precisa permitir ao supermercado alguns armazenamentos básicos:
+    ◦ Cadastro de Clientes
+        ▪ Clientes podem ser de dois tipos (Pessoa Física ou Jurídica)
+    ◦ Cadastro de Lojas
+    ◦ Endereços de Lojas e Clientes
+    ◦ Produtos
+        ▪ Produtos possuem categorias:
+            - Higiene e Limpeza
+            - Perecíveis
+            - Não Perecíveis
+    ◦ Pedidos para o caso de Vendas WEB
+        ▪ Pedidos possuem um cabeçalho e os itens
+    ◦ Emissão de Notas e Cupons Fiscais.
+        ▪ Notas Fiscais possuem Cabeçalho e Itens
+            • Alguns campos do cabeçalho são:
+                ◦ Numero da Nota
+                ◦ Valor Total
+                ◦ Chave de acesso
+                ◦ Série
+                ◦ Data de Emissão
+            • Alguns campos dos Itens
+                ◦ Produtos
+                ◦ Valor unitário
+                ◦ Quantidade
+                ◦ Percentual de ICMS
+                ◦ Valor do ICMS
+
+• Lembrando que as Notas Fiscais podem ter o mesmo conteúdo dos Pedidos. Precisam ser armazenadas em tabelas diferentes pois são documentos fiscais.
+
+• O diagrama deve conter todas as tabelas necessárias ao modelo, com a definição do nome das colunas e os respectivos tipos de dados.
+
+• Também deve ser confeccionado um arquivo de planilhas (XLSX) contendo o Dicionário de Dados do modelo. Este arquivo arquivo deve conter 2 planilhas: uma planilha contendo o nome das tabelas com a respectiva descrição da entidade; outra planilha com o nome da tabela, nome da coluna, tipo de dado (considerando SGBD MySQL), se a coluna é PK, se é FK (no caso, indicar a tabela/coluna de referência), se o campo aceita nulo, e a descrição da coluna.
+
+
+Parte 2 - SQL
+
+A partir do modelo de banco de dados feito na Parte 1, elaborar arquivos de script (extensão .SQL) contendo: 
+
+1. os comandos necessários para criar a estrutura de tabelas do banco de dados;
+2. os comandos necessários para simular cadastro de registros nas tabelas criadas;
+3. os comandos necessários para realizar algumas consultas, que serão definidas abaixo.
+
+A partir deste banco de dados, um sistema de painel será alimentado para informar o dono da empresa sobre as seguintes informações:
+
+- tícket médio de todas as vendas no dia anterior
+- tícket médio de todas as vendas na semana corrente (sete dias para trás a partir do dia de ontem)
+- tícket médio de todas as vendas no mês corrente (do dia 1 do mês corrente até o dia de ontem)
+- tícket médio das vendas Web no dia anterior
+- tícket médio das vendas Web na semana corrente (sete dias para trás a partir do dia de ontem)
+- tícket médio das vendas Web no mês corrente (do dia 1 do mês corrente até o dia de ontem)
+- ranking dos produtos com quantidades mais vendidas no dia anterior 
+- ranking dos produtos com quantidades mais vendidas na semana corrente (sete dias para trás a partir do dia de ontem)
+- ranking dos produtos com quantidades mais vendidas no mês corrente (do dia 1 do mês corrente até o dia de ontem)
+- ranking dos produtos com valores mais vendidos no dia anterior
+- ranking dos produtos com valores mais vendidos na semana corrente (sete dias para trás a partir do dia de ontem)
+- ranking dos produtos com valores mais vendidos no mês corrente (do dia 1 do mês corrente até o dia de ontem)
+- ranking dos clientes que mais compram (valor) no dia anterior
+- ranking dos clientes que mais compram (valor) na semana corrente (sete dias para trás a partir do dia de ontem)
+- ranking dos clientes que mais compram (valor) no mês corrente (do dia 1 do mês corrente até o dia de ontem)
+
+
+Entregáveis:
+
+1. um arquivo Gliffy com o diagrama do modelo de dados;
+2. um arquivo XLSX com o dicionário de dados do banco de dados;
+3. um arquivo SQL com os comandos de criação de tabelas;
+4. um arquivo SQL com os comandos para simular inserção de registros nesse banco;
+5. um arquivo SQL com os comandos para resolver as consultas necessárias para o sistema de painel de informações;
+
+
+Exemplo:
+
+trabalho-diagrama-nome-do-aluno.gliffy
+trabalho-dicionario-nome-do-aluno.xlsx
+trabalho-tabelas-nome-do-aluno.sql
+trabalho-registros-nome-do-aluno.sql
+trabalho-consultas-nome-do-aluno.sql
